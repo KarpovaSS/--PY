@@ -10,7 +10,7 @@ while money_capital >= 0:
     spend *= (1 + increase)
     month += 1
     
-if money_capital % month < spend:
+if money_capital + salary < spend:
     month -= 1
 
 print(month)
