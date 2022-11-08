@@ -2,10 +2,8 @@ def get_count_char(str_):
     symbol_dict = {}
     str_ = str_.lower()
     for symbol in str_:
-        if symbol in symbol_dict:
-            symbol_dict[symbol] += 1
-        elif symbol.isalpha():
-            symbol_dict[symbol] = 1
+        if symbol.isalpha():
+            symbol_dict[symbol] = symbol_dict.get(symbol, 0) + 1
     return symbol_dict
 
 def get_percent_char(dict_=None):
